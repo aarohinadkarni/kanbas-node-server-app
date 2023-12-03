@@ -15,19 +15,19 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: "https://a5--grand-entremet-075770.netlify.app"
+    origin: "https://a6--grand-entremet-075770.netlify.app"
   })
 );   
 const sessionOptions = {
     secret: "any string",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: false
   };
   if (process.env.NODE_ENV !== "development") {
     sessionOptions.proxy = true;
     sessionOptions.cookie = {
       sameSite: "none",
-      secure: true,
+      secure: true
     };
   }
 app.use(session(sessionOptions));  
